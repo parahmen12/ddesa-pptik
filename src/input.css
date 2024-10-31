@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(20px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Tailwind custom animation */
+  @layer utilities {
+    .animate-slide {
+      animation: slide 5s ease-in-out infinite;
+    }
+  }
+  
+/* Efek marquee infinite loop */
+.marquee-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee {
+  display: flex;
+  animation: marquee 3s linear infinite; 
+}
+
+.marquee-content {
+  display: flex;
+}
+
+.marquee-content > div {
+  margin-right: 20px; 
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
