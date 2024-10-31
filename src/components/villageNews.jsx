@@ -20,14 +20,14 @@ const VillageNews = () => {
   const { news, loading, error } = useVillageNews(); // Mengambil berita desa dari API
   
   // Menampilkan loading atau error
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error.message}</div>;
+  if (loading) return <div className="text-center text-white">Loading...</div>;
+  if (error) return <div className="text-center text-white">Error: {error.message}</div>;
 
   return (
     <div className="py-16 bg-gradient-to-r from-blue-800 to-purple-400 min-h-screen font-sans">
-      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center text-center md:text-left h-full">
+      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center md:justify-between text-center md:text-left h-full">
         {/* Bagian kiri: Teks */}
-        <div className="w-full md:w-1/2 md:pr-8 mb-8 md:mb-0">
+        <div className="w-full md:w-1/2 md:pr-8 mb-8 md:mb-0 flex flex-col items-center md:items-start">
           <h2 className="text-4xl font-bold mb-6 text-white">Berita Desa</h2>
           <p className="text-lg text-gray-200 leading-relaxed">
             Jelajahi berita-berita terbaru dari desa kami, mulai dari UMKM, Bupati, hingga kesenian dan kegiatan sosial masyarakat.
@@ -45,7 +45,7 @@ const VillageNews = () => {
                 <div key={index} className="flex flex-col items-center">
                   <img
                     src={`https://bucket-2.nos.wjv-1.neo.id/${item.file}`} // Mengambil URL gambar dari API
-                    alt={`Berita ${index + 1}`}
+                    alt={`News ${index + 1}`}
                     className="h-64 w-full object-cover rounded-lg shadow-lg mb-4" // Menambahkan jarak
                   />
                   <p className="text-white mt-2 text-center">{item.description}</p> {/* Keterangan dari API */}

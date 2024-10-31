@@ -1,4 +1,3 @@
- // Memastikan hanya menggunakan hook ini
 import { useVillageAparatus } from "../hooks/useApi";
 import "../input.css";
 
@@ -22,7 +21,7 @@ const VillageAparatus = () => {
                 key={index}
                 className="min-w-[200px] m-4 p-6 border rounded-lg shadow-md transform transition duration-500 ease-in-out hover:scale-105 hover:shadow-lg"
               >
-                <img src={aparat.file}  className="h-32 w-32 mx-auto rounded-full mb-4" />
+                <img src="https://cdn-icons-png.freepik.com/256/1077/1077114.png?semt=ais_hybrid"  className="h-32 w-32 mx-auto rounded-full mb-4" />
                 <h3 className="text-2xl font-semibold mb-2">{aparat.name}</h3>
                 <p className="text-gray-600">{aparat.position}</p>
               </div>
