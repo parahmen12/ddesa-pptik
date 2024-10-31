@@ -22,10 +22,10 @@ const VillageArea = () => {
 
   return (
     <div style={{ textAlign: "center", padding: "20px" }}>
-      <h3 style={{ fontSize: "24px", marginBottom: "20px" }}>Koordinat Desa</h3>
+      <h3 className="font-sans" style={{ fontSize: "24px", marginBottom: "20px" }}>Koordinat Desa</h3>
       <div style={{ display: "flex", justifyContent: "space-around", gap: "20px" }}>
         {/* Pusat Desa */}
-        <div style={{ flex: 1, margin: "10px" }}>
+        <div style={{ flex: 1, margin: "10px", zIndex: "0" }}>
           <h4 style={{ fontSize: "20px", marginBottom: "10px", color: "#6c757d" }}>Pusat Desa</h4>
           <MapContainer
             center={villageCenter || [-6.9263, 107.6365]}
@@ -45,7 +45,7 @@ const VillageArea = () => {
         </div>
 
         {/* Batas Wilayah Desa */}
-        <div style={{ flex: 1, margin: "10px" }}>
+        <div className="font-sans" style={{ flex: 1, margin: "10px", zIndex: "0" }}>
           <h4 style={{ fontSize: "20px", marginBottom: "10px", color: "#6c757d" }}>Batas Wilayah Desa</h4>
           <MapContainer
             center={area && area.length > 0 ? area[0] : [-6.9263, 107.6365]}

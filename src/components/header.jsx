@@ -35,7 +35,7 @@ const Header = () => {
         </div>
 
         {/* Navigation Links */}
-        <nav className="hidden md:flex flex-grow justify-center space-x-8 font-serif">
+        <nav className="hidden md:flex flex-grow justify-center space-x-8 font-sans">
           <a href="#home" className="text-white hover:text-yellow-300 transition duration-300 transform hover:scale-105" onClick={handleScroll}>Home</a>
           <a href="#villageAparatus" className="text-white hover:text-yellow-300 transition duration-300 transform hover:scale-105" onClick={handleScroll}>Aparat Desa</a>
           <a href="#villageNews" className="text-white hover:text-yellow-300 transition duration-300 transform hover:scale-105" onClick={handleScroll}>Berita Desa</a>

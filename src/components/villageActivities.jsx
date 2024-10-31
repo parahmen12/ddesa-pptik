@@ -2,27 +2,7 @@ import React from 'react';
 import { useVillageActivities } from '../hooks/useApi';
 
 const VillageActivities = () => {
-  const fallbackActivities = [
-    {
-      id: 1,
-      title: "Penyuluhan Pertanian",
-      image: "https://www.metromedianews.co/wp-content/uploads/2021/07/IMG-20210713-WA0005.jpg", 
-      description: "Penyuluhan tentang teknik pertanian modern dan ramah lingkungan.",
-    },
-    {
-      id: 2,
-      title: "Pelatihan Keterampilan",
-      image: "https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2023/07/19/WhatsApp-Image-2023-07-19-at-110716-660089733.jpg", 
-      description: "Pelatihan keterampilan kerajinan tangan untuk meningkatkan perekonomian.",
-    },
-    {
-      id: 3,
-      title: "Musyawarah Desa",
-      image: "https://i0.wp.com/www.metromedianews.co/wp-content/uploads/2024/05/IMG-20240514-WA0035.jpg?fit=1080%2C605&ssl=1&resize=350%2C200", 
-      description: "Musyawarah desa untuk membahas program pembangunan desa.",
-    },
-  ];
-
+  
   const { activities, loading, error } = useVillageActivities(); // Mengambil data kegiatan desa dari API
   
   // Menampilkan loading atau error
