@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { fetchVillageActivities, fetchVillageNews, fetchVillageAparatus, fetchVillageUMKM, fetchVillageProfile } from '../helpers/services';
+import { fetchVillageActivities, fetchVillageNews, fetchVillageUMKM, fetchVillageProfile } from '../helpers/services';
 
 export const useVillageActivities = (page = 1, limit = 10) => {
     const [activities, setActivities] = useState([]);
@@ -58,7 +58,7 @@ export const useVillageNews = (page = 1, limit = 10) => {
         const loadNews = async () => {
             try {
                 const data = await fetchVillageNews(page, limit);
-                setNews(data);
+                setNews(data.data);
             } catch (err) {
                 setError(err);
             } finally {
@@ -130,7 +130,6 @@ export const useVillageArea = () => {
             try {
                 const data = await fetchVillageProfile();
                 
-                // Memastikan data memiliki struktur yang diharapkan
                 if (data && data.vaillage) {
                     if (data.vaillage.villageBoundaries) {
                         setArea(data.vaillage.villageBoundaries.map(boundary => ({
@@ -139,14 +138,12 @@ export const useVillageArea = () => {
                         })));
                     }
 
-                    // Mengambil pusat desa dari data (silakan sesuaikan dengan struktur API Anda)
                     if (data.vaillage.villageBoundaries) {
                         setVillageCenter({
                             lat: data.vaillage.latitude,
                             lng: data.vaillage.longitude,
                         });
                     } else {
-                        // Jika tidak ada data pusat desa, gunakan default
                         setVillageCenter({ lat: -6.9263, lng: 107.6365 }); // Silakan sesuaikan jika perlu
                     }
                 } else {

@@ -27,7 +27,7 @@ const VillageNews = () => {
     <div className="py-16 bg-gradient-to-r from-blue-800 to-purple-400 min-h-screen font-sans">
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center md:justify-between text-center md:text-left h-full">
         {/* Bagian kiri: Teks */}
-        <div className="w-full md:w-1/2 md:pr-8 mb-8 md:mb-0 flex flex-col items-center md:items-start">
+        <div className="w-full md:w-1/2 md:pr-8 mb-8 md:mb-0 flex flex-col items-center md:items-start md:mt-40">
           <h2 className="text-4xl font-bold mb-6 text-white">Berita Desa</h2>
           <p className="text-lg text-gray-200 leading-relaxed">
             Jelajahi berita-berita terbaru dari desa kami, mulai dari UMKM, Bupati, hingga kesenian dan kegiatan sosial masyarakat.
@@ -35,10 +35,10 @@ const VillageNews = () => {
         </div>
 
         {/* Garis pembagi vertikal */}
-        <div className="hidden md:block w-[1px] bg-white h-48 mx-8"></div>
+        <div className="hidden md:block w-[1px] bg-white h-48 mx-8 md:mt-40"></div>
 
         {/* Bagian kanan: Slider gambar */}
-        <div className="w-full md:w-1/2 flex flex-col items-center md:items-start">
+        <div className="w-full md:w-1/2 flex flex-col items-center md:items-start md:mx-4 md:mt-40">
           <Slider {...settings} className="w-full">
             {news && news.length > 0 ? (
               news.map((item, index) => (
