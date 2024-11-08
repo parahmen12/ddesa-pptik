@@ -1,17 +1,17 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // Pastikan untuk mengimpor CSS AOS
+import 'aos/dist/aos.css'; 
 
 const Hero = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Durasi animasi dalam milidetik
+      duration: 1000,
     });
   }, []);
 
   return (
     <div className="relative h-screen flex items-center font-sans justify-between px-8">
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-800 to-purple-400 opacity-100"></div> {/* Background Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-800 to-purple-400 opacity-100"></div> 
 
       {/* Bagian teks */}
       <div data-aos="fade-right" className="relative z-10 p-8 rounded-lg w-1/2 text-left">
@@ -32,19 +32,18 @@ const Hero = () => {
         </button>
       </div>
 
-      {/* Bagian card foto di sebelah kanan */}
       <div className="relative z-10 w-1/3 flex justify-center">
         {/* Lingkaran kuning di belakang gambar */}
         <div data-aos="slide-right" className="absolute w-64 h-64 bg-yellow-300 rounded-full z-0"></div>
         <img
           src="/img/MobileApps.png"
           alt="Profil Desa"
-          data-aos="slide-up" // Animasi untuk gambar
+          data-aos="slide-up" 
           className="w-full h-full object-cover relative z-10" 
         />
       </div>
 
-      {/* Card kecil abstrak di bawah */}
+      {/* Card  */}
       <div className="absolute bottom-0 left-16 w-24 h-24 bg-blue-500 rounded-full transform translate-y-1/2 shadow-lg"></div>
     </div>
   );
